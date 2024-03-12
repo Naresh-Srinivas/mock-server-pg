@@ -39,6 +39,13 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 
+EXTERNAL_APPS = [
+    "subscriptions",
+    "rest_framework"
+]
+
+INSTALLED_APPS += EXTERNAL_APPS
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
