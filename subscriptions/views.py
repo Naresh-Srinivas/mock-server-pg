@@ -19,7 +19,8 @@ class CreateSubscriptionView(APIView):
             recurring_count=data['recurringCount'],
             mobile_number=data['mobileNumber'])
         serializer = SubscriptionSerializer(data=subscription)
-        if serializer.is_valid() and check_unique(subscription.merchant_subscription_id):
+        if (serializer.is_valid()
+                and check_if_subsId_unique(subscription.merchant_subscription_id)):
             serializer.save()
         subscription = Subscription.objects.get(
             merchant_subscription_id=data['merchantSubscriptionId'])
@@ -40,6 +41,11 @@ class CreateSubscriptionView(APIView):
         }
         return response
 
+class FetchSubscriptionView(APIView):
+    def get(self, request):
+        subscriptions = Subscription.objects.all()
+        serializer = SubscriptionSerializer(subscriptions, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
-def check_unique(subscription_id):
+def check_if_subsId_unique(subscription_id):
     return Subscription.objects.filter(merchant_subscription_id=subscription_id) is None
