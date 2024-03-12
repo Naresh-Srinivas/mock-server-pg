@@ -10,4 +10,5 @@ class Subscription(models.Model):
     frequency = models.CharField(max_length=20)
     recurring_count = models.IntegerField()
     mobile_number = models.CharField(max_length=15)
+    status = models.CharField(max_length=20)
 
