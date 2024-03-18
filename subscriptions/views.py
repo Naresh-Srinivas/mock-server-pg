@@ -101,6 +101,7 @@ class TransactionView(APIView):
         trans = Transaction.objects.get(subscription_id=data['subscriptionId'])
         if trans.pay_response_code == "SUCCESS":
             mark_subs_active(data['subscriptionId'])
+            send_subs_success_callback(trans.subscription_id)
         return create_transaction_response(data['subscriptionId'])
 
 

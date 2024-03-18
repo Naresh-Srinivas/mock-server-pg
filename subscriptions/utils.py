@@ -5,6 +5,7 @@ from rest_framework import status
 from rest_framework.response import Response
 
 from .serializers import *
+import requests
 
 
 def check_if_subs_id_unique(subscription_id):
@@ -219,4 +220,16 @@ def create_transaction_response(subscription_id):
             "subscription_details": SubscriptionSerializer(subs).data
         }
     }
+    return response
+
+
+def send_subs_success_callback(subscription_id):
+    headers = {'Content-Type': 'application/json'}
+    url = " "
+    payload = {
+        "callback_type": "SUBSCRIPTION_STATUS",
+        "subscription_id": subscription_id,
+        "status": "ACTIVE"
+    }
+    response = requests.post(url, data=payload, headers=headers)
     return response
