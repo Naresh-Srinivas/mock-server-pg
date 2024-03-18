@@ -241,6 +241,11 @@ def send_subs_success_callback(subscription_id):
 
 
 def initiate_subs_cancellation(subscription):
+    """
+    Initiates the subscription cancellation process
+    :param subscription:
+    :return:
+    """
     subs = Subscription.objects.get(id=subscription['subscriptionId'])
     if subs is None:
         return None
@@ -249,6 +254,11 @@ def initiate_subs_cancellation(subscription):
 
 
 def initiate_subs_cancel_response(subscription):
+    """
+    Created and sends Subscription Cancellation Response
+    :param subscription:
+    :return:
+    """
     subs = Subscription.objects.get(id=subscription['subscriptionId'])
     if subs.state == "CANCEL_IN_PROGRESS":
         response = Response()
@@ -267,6 +277,11 @@ def initiate_subs_cancel_response(subscription):
 
 
 def mark_subs_cancelled(subscription_id):
+    """
+    Mark Subscription Cancelled
+    :param subscription_id:
+    :return:
+    """
     subs = Subscription.objects.get(id=subscription_id)
     if subs is None:
         return None
@@ -275,6 +290,11 @@ def mark_subs_cancelled(subscription_id):
 
 
 def mark_subs_cancelled_and_send_callback(subscription_id):
+    """
+    Sends Subscription Cancellation Callback
+    :param subscription_id:
+    :return:
+    """
     mark_subs_cancelled(subscription_id)
     subs = Subscription.objects.get(id=subscription_id)
     if subs.state == "CANCELLED":

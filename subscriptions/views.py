@@ -106,14 +106,30 @@ class TransactionView(APIView):
 
 
 class CancelSubscriptionView(APIView):
+    """
+    View for cancelling a subscription
+    """
     def post(self, request):
+        """
+        POST method for cancelling a subscription
+        :param request:
+        :return:
+        """
         data = request.data
         initiate_subs_cancellation(data)
         return initiate_subs_cancel_response(data)
 
 
 class CancelCallbackView(APIView):
+    """
+    View for sending subscription cancellation callback
+    """
     def post(self, request):
+        """
+        POST method for sending subscription cancellation callback
+        :param request:
+        :return:
+        """
         data = request.data
         subs = Subscription.objects.get(id=data['subscriptionId'])
         if subs.state == "CANCEL_IN_PROGRESS":
