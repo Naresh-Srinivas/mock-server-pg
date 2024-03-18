@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b834a5a2-8f59-4b10-810f-aea30b25fdba" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/01995c7d-4c69-405d-8fbd-f6db31798a38.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/01995c7d-4c69-405d-8fbd-f6db31798a38/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1cebfabc-9c97-48cc-a67a-e6ff24d21fe1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1cebfabc-9c97-48cc-a67a-e6ff24d21fe1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1e14bd3d-04b5-4e6e-952c-3d6a8c0674cf.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1e14bd3d-04b5-4e6e-952c-3d6a8c0674cf/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3f346b9d-5cdd-4bb5-869e-c222e0a86a58.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3f346b9d-5cdd-4bb5-869e-c222e0a86a58/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6753680b-39e8-4d36-9179-e34f671dc4c9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6753680b-39e8-4d36-9179-e34f671dc4c9/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/afab5ce9-92e1-418f-bb14-604277373b82.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/afab5ce9-92e1-418f-bb14-604277373b82/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/efbed880-ecfb-45a9-b402-ecae86967236.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/efbed880-ecfb-45a9-b402-ecae86967236/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscriptions/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/subscriptions/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subscriptions/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/subscriptions/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subscriptions/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subscriptions/views.py" afterDir="false" />
     </list>
@@ -117,7 +106,7 @@
       <workItem from="1710415812196" duration="1203000" />
       <workItem from="1710479920269" duration="16291000" />
       <workItem from="1710611026452" duration="13678000" />
-      <workItem from="1710739427530" duration="952000" />
+      <workItem from="1710739427530" duration="4003000" />
     </task>
     <servers />
   </component>

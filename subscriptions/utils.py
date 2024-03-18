@@ -224,6 +224,11 @@ def create_transaction_response(subscription_id):
 
 
 def send_subs_success_callback(subscription_id):
+    """
+    Sends a callback if the subscription is successfully set
+    :param subscription_id:
+    :return:
+    """
     headers = {'Content-Type': 'application/json'}
     url = " "
     payload = {
@@ -233,3 +238,52 @@ def send_subs_success_callback(subscription_id):
     }
     response = requests.post(url, data=payload, headers=headers)
     return response
+
+
+def initiate_subs_cancellation(subscription):
+    subs = Subscription.objects.get(id=subscription['subscriptionId'])
+    if subs is None:
+        return None
+    subs.state = "CANCEL_IN_PROGRESS"
+    subs.save()
+
+
+def initiate_subs_cancel_response(subscription):
+    subs = Subscription.objects.get(id=subscription['subscriptionId'])
+    if subs.state == "CANCEL_IN_PROGRESS":
+        response = Response()
+        response.success = True
+        response.status_code = status.HTTP_200_OK
+        response.data = {
+            "success": True,
+            "code": "SUCCESS",
+            "message": "Your subscription has been successfully suspended.",
+            "data": {
+                "subscription_id": subs.id,
+                "state": subs.state
+            }
+        }
+        return response
+
+
+def mark_subs_cancelled(subscription_id):
+    subs = Subscription.objects.get(id=subscription_id)
+    if subs is None:
+        return None
+    subs.state = "CANCELLED"
+    subs.save()
+
+
+def mark_subs_cancelled_and_send_callback(subscription_id):
+    mark_subs_cancelled(subscription_id)
+    subs = Subscription.objects.get(id=subscription_id)
+    if subs.state == "CANCELLED":
+        headers = {'Content-Type': 'application/json'}
+        url = " "
+        payload = {
+            "callback_type": "SUBSCRIPTION_CANCEL",
+            "subscription_id": subscription_id,
+            "status": "CANCELLED"
+        }
+        response = requests.post(url, data=payload, headers=headers)
+        return response
