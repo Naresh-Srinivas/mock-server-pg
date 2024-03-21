@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path("subscriptions/", include("subscriptions.urls")),
+    path("notifications/", include("notifications.urls")),
     path("admin/", admin.site.urls),
 ]

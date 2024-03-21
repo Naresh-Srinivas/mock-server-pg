@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
 EXTERNAL_APPS = [
     "subscriptions",
+    "notifications",
     "rest_framework"
 ]
 
