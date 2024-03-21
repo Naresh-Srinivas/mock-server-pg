@@ -23,7 +23,7 @@ def create_new_notification(data):
     serializer = NotificationSerializer(data=notification)
     if serializer.is_valid() and subscriptions.models.Subscription.objects.get(id=data['subscription_id']):
         serializer.save()
-    notification = Notification.objects.get(subscription_id=data['subscription_id'])
+    notification = Notification.objects.get(transaction_id=data['transaction_id'])
     if notification:
         notification.state = "ACCEPTED"
         notification.save()

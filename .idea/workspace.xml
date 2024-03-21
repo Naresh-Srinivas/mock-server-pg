@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b834a5a2-8f59-4b10-810f-aea30b25fdba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/notifications/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock_server_pg/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mock_server_pg/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock_server_pg/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mock_server_pg/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notifications/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/notifications/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1cebfabc-9c97-48cc-a67a-e6ff24d21fe1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1cebfabc-9c97-48cc-a67a-e6ff24d21fe1/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/de831b4f-ae13-44b1-8f50-d40bed6b0869.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/de831b4f-ae13-44b1-8f50-d40bed6b0869.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notifications/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/notifications/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notifications/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/notifications/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subscriptions/migrations/0001_initial.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +49,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
