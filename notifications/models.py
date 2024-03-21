@@ -1,7 +1,11 @@
 from django.db import models
 
+
 # Create your models here.
 class Notification(models.Model):
+    """
+    Notification Model
+    """
     merchant_id = models.CharField(max_length=20)
     merchant_user_id = models.CharField(max_length=20)
     subscription_id = models.CharField(max_length=20)
