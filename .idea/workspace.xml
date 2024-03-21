@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b834a5a2-8f59-4b10-810f-aea30b25fdba" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/notifications/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subscriptions/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/subscriptions/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subscriptions/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/subscriptions/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subscriptions/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subscriptions/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +22,15 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
