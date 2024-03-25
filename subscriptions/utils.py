@@ -185,6 +185,11 @@ def create_new_transaction(transaction):
         trans_data.state = "COMPLETED"
         trans_data.pay_response_code = "SUCCESS"
         trans_data.save()
+    else:
+        trans_data.state = "FAILED"
+        trans_data.pay_response_code = "FAILED"
+        trans_data.save()
+
 
 
 def mark_subs_active(subscription_id):
@@ -197,6 +202,19 @@ def mark_subs_active(subscription_id):
     if subs is None:
         return None
     subs.state = "ACTIVE"
+    subs.save()
+
+
+def mark_subs_failed(subscription_id):
+    """
+        Marks a subscription as FAILED
+        :param subscription_id:
+        :return:
+        """
+    subs = Subscription.objects.get(id=subscription_id)
+    if subs is None:
+        return None
+    subs.state = "FAILED"
     subs.save()
 
 
@@ -214,7 +232,7 @@ def create_transaction_response(subscription_id):
     response.data = {
         "success": True,
         "code": "SUCCESS",
-        "message": "Your Subscription is Active",
+        "message": "Your subscription is " + subs.state,
         "data": {
             "transaction_details": TransactionSerializer(transaction).data,
             "subscription_details": SubscriptionSerializer(subs).data

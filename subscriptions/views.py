@@ -99,9 +99,12 @@ class TransactionView(APIView):
         data = request.data
         create_new_transaction(data)
         trans = Transaction.objects.get(subscription_id=data['subscriptionId'])
-        if trans.pay_response_code == "SUCCESS":
+        if (trans.pay_response_code == "SUCCESS" and
+                AuthInit.objects.get(subscription_id=data['subscriptionId']).state == "CREATED"):
             mark_subs_active(data['subscriptionId'])
             send_subs_success_callback(trans.subscription_id)
+        else:
+            mark_subs_failed(data['subscriptionId'])
         return create_transaction_response(data['subscriptionId'])
 
 
